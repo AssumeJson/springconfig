@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: protal
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:123456@localhost:8081/eureka/
+server:
+  port: 8083
+#########将本服务的负载均衡方案修改为 随机
+MANAGER:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+####定义变量
+foo: foo version 1
